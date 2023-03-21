@@ -1,0 +1,46 @@
+@import "../../assets/scss/Variables.scss";
+
+.question {
+  color: $text-color;
+  margin-bottom: 1.3rem;
+}
+
+.answers-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $divider-color;
+
+  .answer {
+    border: 1px solid $action-btn-bg;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: $text-color;
+
+    &.selected {
+      background-color: $answer-selected-bg;
+      font-weight: bold;
+      border: none;
+    }
+
+    &.correct {
+      border: none;
+      color: $text-color-60;
+      background-color: $answer-correct-bg;
+    }
+
+    &.wrong {
+      @extend .correct;
+      background-color: $answer-wrong-bg;
+    }
+
+    &:hover {
+      background-color: $answer-selected-bg;
+    }
+  }
+}
+
+.answers-container-2 {
+  justify-content: space-evenly;
+}

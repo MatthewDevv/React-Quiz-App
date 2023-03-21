@@ -1,0 +1,66 @@
+@import "../../assets/scss/Variables.scss";
+
+.quiz-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-header {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    color: $text-color;
+    margin-bottom: 1rem;
+  }
+
+  &-desc {
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+
+  .btn-action {
+    margin-top: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      min-width: 22rem;
+
+      label {
+        color: $text-color;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        padding: 0.6rem;
+        font-size: 1rem;
+        border: 2px solid $answer-selected-bg;
+        border-radius: 0.3rem;
+        outline: none;
+
+        &:focus {
+          border: 2px solid $action-btn-bg;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .quiz-menu {
+    &-desc {
+      width: 20rem;
+    }
+  }
+}
